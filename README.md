@@ -2,16 +2,16 @@
 My opinionated PHP coding standard rules for PHP_CodeSniffer
 
 
-# Installation
+## Installation
 
 ```bash
 composer require graillus/php-coding-standard --dev
 ```
 
-# Usage
+## Usage
 ```bash
 vendor/bin/phpcs --standard=vendor/graillus/php-coding-standard/src/ruleset.xml --extensions=php src 
 ```
 
-# License
+## License
 MIT License, see the license file
