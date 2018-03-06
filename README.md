@@ -10,7 +10,7 @@ composer require graillus/php-coding-standard --dev
 
 # Usage
 ```bash
-vendor/bin/phpcs 
+vendor/bin/phpcs --standard=vendor/graillus/php-coding-standard/src/ruleset.xml --extensions=php src 
 ```
 
 # License
