@@ -137,8 +137,6 @@
     </rule>
     <!-- report invalid format of inline phpDocs with @var -->
     <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
-    <!-- Require comments with single line written as one-liners -->
-    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
     <!-- Forbid assignments in conditions -->
     <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
     <!-- Forbid fancy yoda conditions -->
@@ -166,11 +164,11 @@
     <!-- Forbid using absolute class name references (except global ones) -->
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
         <properties>
-            <property name="allowFallbackGlobalConstants" type="boolean" value="false"/>
-            <property name="allowFallbackGlobalFunctions" type="boolean" value="false"/>
+            <property name="allowFallbackGlobalConstants" type="boolean" value="true"/>
+            <property name="allowFallbackGlobalFunctions" type="boolean" value="true"/>
             <property name="allowFullyQualifiedGlobalClasses" type="boolean" value="true"/>
-            <property name="allowFullyQualifiedGlobalConstants" type="boolean" value="false"/>
-            <property name="allowFullyQualifiedGlobalFunctions" type="boolean" value="false"/>
+            <property name="allowFullyQualifiedGlobalConstants" type="boolean" value="true"/>
+            <property name="allowFullyQualifiedGlobalFunctions" type="boolean" value="true"/>
             <property name="allowFullyQualifiedNameForCollidingClasses" type="boolean" value="true"/>
             <property name="allowFullyQualifiedNameForCollidingConstants" type="boolean" value="true"/>
             <property name="allowFullyQualifiedNameForCollidingFunctions" type="boolean" value="true"/>
@@ -335,6 +333,8 @@
         <exclude name="Squiz.Commenting.FunctionComment.ParamNameNoMatch"/>
         <!-- Doesn't respect inheritance -->
         <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing"/>
+        <!-- Don't require @param variable names to be aligned -->
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
         <!-- Doesn't work with self as typehint -->
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing"/>
     </rule>
