@@ -116,6 +116,8 @@
     </rule>
     <!-- Forbid empty comments -->
     <rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
+    <!-- Forbid one-line property comments -->
+    <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
     <!-- Forbid useless comments -->
     <rule ref="SlevomatCodingStandard.Commenting.ForbiddenComments">
         <properties>
