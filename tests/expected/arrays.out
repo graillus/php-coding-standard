@@ -1,0 +1,14 @@
+
+FILE: tests/input/arrays.php
+------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+------------------------------------------------------------------------------------------
+  5 | ERROR | [x] Short array syntax must be used to define arrays
+  7 | ERROR | [x] list(...) is forbidden, use [...] instead.
+  9 | ERROR | [x] Multi-line array contains a single value; use single-line array instead
+ 15 | ERROR | [x] Multi-line arrays must have a trailing comma after the last element.
+------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------
+
+

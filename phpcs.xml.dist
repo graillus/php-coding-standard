@@ -4,12 +4,8 @@
 
     <arg name="basepath" value="."/>
     <arg name="extensions" value="php"/>
-    <arg name="colors" />
 
-    <!-- Show progress of the run -->
-    <arg value="p"/>
+    <rule ref="lib/Graillus/ruleset.xml"/>
 
-    <rule ref="Graillus"/>
-
-    <file>src</file>
+    <file>lib</file>
 </ruleset>

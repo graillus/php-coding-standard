@@ -12,19 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.1",
-        "slevomat/coding-standard": "4.5.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Graillus\\PhpCodingStandard\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Graillus\\PhpCodingStandard\\": "tests"
-        }
+        "squizlabs/php_codesniffer": "^3.4",
+        "slevomat/coding-standard": "^5.0"
     }
 }

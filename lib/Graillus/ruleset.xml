@@ -4,8 +4,12 @@
 
     <config name="installed_paths" value="../../slevomat/coding-standard"/>
 
+    <!-- Import PSR-1 coding standard (base) -->
+    <rule ref="PSR1"/>
     <!-- Import PSR-2 coding standard (base) -->
     <rule ref="PSR2"/>
+    <!-- Import PSR-12 coding standard (base) -->
+    <rule ref="PSR12"/>
 
     <!-- Forbid `array(...)` -->
     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
@@ -85,6 +89,13 @@
             <property name="fixable" type="boolean" value="true"/>
         </properties>
     </rule>
+    <!-- Forbid empty lines around class declarations -->
+    <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
+        <properties>
+            <property name="linesCountAfterOpeningBrace" value="0"/>
+            <property name="linesCountBeforeClosingBrace" value="0"/>
+        </properties>
+    </rule>
     <!-- Forbid dead code -->
     <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
     <!-- Forbid suffix "Abstract" for abstract classes -->
@@ -135,8 +146,6 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
     <!-- Forbid fancy yoda conditions -->
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
-    <!-- Forbid weak comparisons -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEqualOperators"/>
     <!-- Require usage of early exit -->
     <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit"/>
     <!-- Require language constructs without parentheses -->
@@ -179,6 +188,8 @@
     <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
     <!-- Forbid useless uses of the same namespace -->
     <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace"/>
+    <!-- Enforces using short form of list syntax -->
+    <rule ref="SlevomatCodingStandard.PHP.ShortList"/>
     <!-- Forbid use of longhand cast operators -->
     <rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
     <!-- Require presence of declare(strict_types=1) -->
@@ -186,7 +197,7 @@
         <properties>
             <property
                     name="newlinesCountBetweenOpenTagAndDeclare"
-                    value="1"
+                    value="2"
             />
             <property
                     name="spacesCountAroundEqualsSign"
@@ -264,13 +275,6 @@
             />
         </properties>
     </rule>
-    <!-- Forbid empty lines around type declarations -->
-    <rule ref="SlevomatCodingStandard.Types.EmptyLinesAroundTypeBraces">
-        <properties>
-            <property name="linesCountAfterOpeningBrace" value="0"/>
-            <property name="linesCountBeforeClosingBrace" value="0"/>
-        </properties>
-    </rule>
     <!-- Forbid spaces around square brackets -->
     <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
     <!-- Force array declaration structure -->
@@ -334,6 +338,8 @@
     </rule>
     <!-- Forbid global functions -->
     <rule ref="Squiz.Functions.GlobalFunction"/>
+    <!-- Forbid weak comparisons -->
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
     <!-- Forbid `AND` and `OR`, require `&&` and `||` -->
     <rule ref="Squiz.Operators.ValidLogicalOperators"/>
     <!-- Forbid `global` -->
